@@ -1324,7 +1324,7 @@ d3.csv("https://raw.githubusercontent.com/behnoudshafizadeh/Perspolis/master/Bub
              .domain([35, 100])
              .range([0, width])
           svg.append("g").attr("class", "axis").attr("transform", "translate(0," + height + ")")
-             .call(d3.axisBottom(x).tickFormat((d) => (d === 0 ? d : d + " ")))
+             .call(d3.axisBottom(x).tickFormat((d) => (d === 0 ? d : d + "")))
              .selectAll("text")
              .attr("fill", "black");
                
@@ -1342,7 +1342,7 @@ d3.csv("https://raw.githubusercontent.com/behnoudshafizadeh/Perspolis/master/Bub
           svg.append("g")
              .attr("class", "axis")
              .attr("transform", "translate(0, 0)")
-             .call(d3.axisTop(x).tickFormat((d) => (d === 0 ? d : d + " ")))
+             .call(d3.axisTop(x).tickFormat((d) => (d === 0 ? d : d + "")))
              .selectAll("text")
              .attr("fill", "black");
                     
